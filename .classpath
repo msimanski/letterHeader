@@ -22,5 +22,6 @@
 	<classpathentry exported="true" kind="lib" path="/Users/michaelsimanski/eclipse-workspace/letterHeader/poi-4.1.0/lib/commons-collections4-4.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/michaelsimanski/eclipse-workspace/letterHeader/poi-4.1.0/lib/commons-codec-1.12.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/michaelsimanski/eclipse-workspace/letterHeader/poi-4.1.0/lib/activation-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/michaelsimanski/eclipse-workspace/letterHeader/poi-4.1.0/ooxml-schemas-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
