@@ -61,12 +61,12 @@ public class CreateDocument
 		nameRunner.setFontFamily("Times");
 		
 		// make address
-		addressRunner.setText("address");
+		addressRunner.setText("2907 S 10th Ave, Altoona, PA 16601");
 		addressRunner.setFontSize(12);
 		addressRunner.setFontFamily("Times");
 		
 		// make phone
-		phoneRunners.get(phoneID).setText("phone");
+		phoneRunners.get(phoneID).setText("(814) 414 - 9770");
 		phoneRunners.get(phoneID).setFontSize(12);
 		phoneRunners.get(phoneID).setFontFamily("Times");
 		
@@ -74,7 +74,7 @@ public class CreateDocument
 		emailRunners.get(emailID1).setText("mfsimanski@gmail.com");
 		emailRunners.get(emailID1).setFontSize(12);
 		emailRunners.get(emailID1).setFontFamily("Times");	
-		emailRunners.get(emailID2).setText("secondemail");
+		emailRunners.get(emailID2).setText("m.simanski@setonhill.edu");
 		emailRunners.get(emailID2).setFontSize(12);
 		emailRunners.get(emailID2).setFontFamily("Times");
 		emailRunners.get(emailID2).addCarriageReturn();
@@ -83,6 +83,8 @@ public class CreateDocument
 		XWPFParagraph dateParagraph = document.createParagraph();
 		XWPFRun dateRunner = dateParagraph.createRun();
 		dateRunner.setText(letterDateFormat.format(date));
+		dateRunner.setFontSize(12);
+		dateRunner.setFontFamily("Times");
 		
 		document.write(out);
 		out.close();
