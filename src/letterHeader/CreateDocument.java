@@ -22,27 +22,36 @@ public class CreateDocument
 	// create paragraphs for header
 	static XWPFParagraph name = document.createParagraph();
 	static XWPFParagraph address = document.createParagraph();
+	
+	// in the case of the need for multiple paragraphs, declare and use ArrayList
 	static ArrayList<XWPFParagraph> phoneNumbers = new ArrayList<XWPFParagraph>();
 	static ArrayList<XWPFParagraph> emails = new ArrayList<XWPFParagraph>();
 			
-	// create runner objects
+	// create runner objects, all objects here need a runner to be used
 	static XWPFRun nameRunner = name.createRun();
 	static XWPFRun addressRunner = address.createRun();
+	
 	// remember to make a runner for each email
 	static ArrayList<XWPFRun> phoneRunners = new ArrayList<XWPFRun>();
 	static ArrayList<XWPFRun> emailRunners = new ArrayList<XWPFRun>();
 	
 	public static void main(String[] args) throws Exception 
 	{	
+		// import quotes to memory
+		Quotes q = new Quotes();
+		
 		// make datetime for timestamp and letter
 		DateFormat fileDateFormat = new SimpleDateFormat("MM:dd:yyyy");
 		DateFormat letterDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Date date = new Date();
 		
-		// create IO stream with document name
+		// create IO stream with document name, as well as timestamp
 		FileOutputStream out = new FileOutputStream( new File("letterhead" + fileDateFormat.format(date) + ".docx"));
 		
+		// create new section
 		CTSectPr sectPr = document.getDocument().getBody().addNewSectPr();
+		
+		// create page margins for new section and initialize to appropriate margin size
 		CTPageMar pageMar = sectPr.addNewPgMar();
 		pageMar.setLeft(BigInteger.valueOf(720L));
 		pageMar.setTop(BigInteger.valueOf(720L));
@@ -50,6 +59,7 @@ public class CreateDocument
 		pageMar.setBottom(BigInteger.valueOf(720L));
 		
 		// storing the ID automatically makes the objects
+		// TODO: store these in dynamic lists
 		int phoneID = addListParagraph("phone");
 		int emailID1 = addListParagraph("email");
 		int emailID2 = addListParagraph("email");

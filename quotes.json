@@ -1,0 +1,33 @@
+{
+	"quotes": 
+	[
+		{
+			"id": 1,
+			"text": "\"Your mouth is gonna get your face in a whole lot of trouble!\"",
+			"author": "Charlie Storm",
+			"tags": 
+			[
+				{
+					"tag": "funny"
+				},
+				{
+					"tag": "personal"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"text": "\"Lead me, follow me, or get out of my way.\"",
+			"author": "General George S. Patton",
+			"tags": 
+			[
+				{
+					"tag": "war"
+				},
+				{
+					"tag": "leadership"
+				}
+			]
+		}
+	]
+}
